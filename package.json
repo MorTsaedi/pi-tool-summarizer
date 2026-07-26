@@ -1,0 +1,14 @@
+{
+  "name": "pi-tool-summarizer",
+  "version": "1.0.0",
+  "description": "Pi extension that summarizes long tool outputs using a local Ollama model. Cuts token usage by 40-60%.",
+  "keywords": ["pi", "pi-extension", "ollama", "token-saver", "summarization", "coding-agent"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MorTsaedi/pi-tool-summarizer.git"
+  },
+  "piConfig": {
+    "extensions": ["src/summarize-tool-output.ts"]
+  }
+}
