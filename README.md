@@ -1,6 +1,6 @@
-# pi-tool-summarizer
+# pi-cli-tool-summarizer
 
-**Cut your pi token usage by 40-60%.** A pi extension that summarizes verbose tool outputs (test results, build logs, file dumps) using a tiny local LLM before they reach your expensive API model.
+**Cut your pi cli (ai agent) token usage by 40-60%.** A pi extension that summarizes verbose tool outputs (test results, build logs, file dumps) using a tiny local LLM before they reach your expensive API model.
 
 ## Why?
 
@@ -10,7 +10,7 @@ AI coding agents like pi, Claude Code, and OpenCode all share the same fundament
 LLM → calls bash "npm test" → 5000 lines of output → fed back to LLM → LLM reads all 5000 lines
 ```
 
-The expensive model doesn't need to read 5000 lines of test output. It just needs to know *what failed*. Sending raw output verbatim is pure token waste.
+The expensive model doesn't need to read 5000 lines of test output. It just needs to know *what failed*. Sending raw output verbatim is pure token waste. summarizing is an easy task and small local models are greate at it. lets use them!
 
 This extension intercepts tool results and runs them through a **local** 1B parameter model (llama3.2:1b) that compresses the noise into 1-2 sentences. The expensive model only sees the summary.
 
